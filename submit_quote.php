@@ -5,7 +5,7 @@ $username = "root";
 $password = "";
 $dbname = "pixel_db";
 
-// DB connection
+// DB connections
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 // Check connection
@@ -23,7 +23,7 @@ $requirement = htmlspecialchars($_POST['requirement']);
 $stmt = $conn->prepare("INSERT INTO quotes (name, phone, email, requirement) VALUES (?, ?, ?, ?)");
 $stmt->bind_param("ssss", $name, $phone, $email, $requirement);
 
-// Execute
+// Execution 
 if ($stmt->execute()) {
   echo "<script>alert('Message sent successfully!'); window.location.href='index.html';</script>";
 } else {
