@@ -1,8 +1,5 @@
 php 
 
-
-
-
 <?php
 // DB credentials
 $servername = "localhost";
